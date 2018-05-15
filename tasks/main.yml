@@ -1,0 +1,8 @@
+---
+
+- name: Copy SSH-service optimized configuration file on target host(s)
+  copy:
+    src: sshd_config
+    dest: /etc/ssh/sshd_config
+  notify:
+    - sshd reload
